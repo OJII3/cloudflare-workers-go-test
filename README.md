@@ -19,6 +19,7 @@
 ```console
 wrangler generate my-app syumai/workers/_templates/cloudflare/worker-tinygo
 cd my-app
+go get package github.com/syumai/workers
 go mod init
 go mod tidy
 make dev # start running dev server
@@ -50,3 +51,7 @@ Hello!
 $ curl -X POST -d "test message" http://localhost:8787/echo
 test message
 ```
+
+### Testing published worker
+
+- <https://tinygo-worker.ojii3-cloudflare-workers-test.workers.dev>
